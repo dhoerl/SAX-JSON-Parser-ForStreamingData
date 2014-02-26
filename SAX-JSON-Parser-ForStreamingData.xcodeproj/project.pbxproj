@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE30C7F318BD353100C9B409 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE30C7F218BD353100C9B409 /* Foundation.framework */; };
+		DE30C7F518BD353100C9B409 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE30C7F418BD353100C9B409 /* CoreGraphics.framework */; };
+		DE30C7F718BD353100C9B409 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE30C7F618BD353100C9B409 /* UIKit.framework */; };
+		DE30C7FD18BD353100C9B409 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE30C7FB18BD353100C9B409 /* InfoPlist.strings */; };
+		DE30C7FF18BD353100C9B409 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE30C7FE18BD353100C9B409 /* main.m */; };
+		DE30C80318BD353100C9B409 /* DHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE30C80218BD353100C9B409 /* DHAppDelegate.m */; };
+		DE30C80618BD353100C9B409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE30C80418BD353100C9B409 /* Main.storyboard */; };
+		DE30C80918BD353100C9B409 /* DHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE30C80818BD353100C9B409 /* DHViewController.m */; };
+		DE30C80B18BD353100C9B409 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE30C80A18BD353100C9B409 /* Images.xcassets */; };
+		DE30C81218BD353100C9B409 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE30C81118BD353100C9B409 /* XCTest.framework */; };
+		DE30C81318BD353100C9B409 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE30C7F218BD353100C9B409 /* Foundation.framework */; };
+		DE30C81418BD353100C9B409 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE30C7F618BD353100C9B409 /* UIKit.framework */; };
+		DE30C81C18BD353100C9B409 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE30C81A18BD353100C9B409 /* InfoPlist.strings */; };
+		DE30C81E18BD353100C9B409 /* SAX_JSON_Parser_ForStreamingDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE30C81D18BD353100C9B409 /* SAX_JSON_Parser_ForStreamingDataTests.m */; };
+		DE30C82A18BD367D00C9B409 /* JSONObjectExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DE30C82918BD367D00C9B409 /* JSONObjectExtractor.m */; };
+		DE30C82B18BD367D00C9B409 /* JSONObjectExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DE30C82918BD367D00C9B409 /* JSONObjectExtractor.m */; };
+		DE30C82D18BD38DA00C9B409 /* JSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE30C82C18BD38DA00C9B409 /* JSON.txt */; };
+		DE30C82E18BD38DA00C9B409 /* JSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE30C82C18BD38DA00C9B409 /* JSON.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE30C81518BD353100C9B409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE30C7E718BD353100C9B409 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE30C7EE18BD353100C9B409;
+			remoteInfo = "SAX-JSON-Parser-ForStreamingData";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE30C7EF18BD353100C9B409 /* SAX-JSON-Parser-ForStreamingData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SAX-JSON-Parser-ForStreamingData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE30C7F218BD353100C9B409 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DE30C7F418BD353100C9B409 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DE30C7F618BD353100C9B409 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DE30C7FA18BD353100C9B409 /* SAX-JSON-Parser-ForStreamingData-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SAX-JSON-Parser-ForStreamingData-Info.plist"; sourceTree = "<group>"; };
+		DE30C7FC18BD353100C9B409 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DE30C7FE18BD353100C9B409 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DE30C80018BD353100C9B409 /* SAX-JSON-Parser-ForStreamingData-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SAX-JSON-Parser-ForStreamingData-Prefix.pch"; sourceTree = "<group>"; };
+		DE30C80118BD353100C9B409 /* DHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHAppDelegate.h; sourceTree = "<group>"; };
+		DE30C80218BD353100C9B409 /* DHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHAppDelegate.m; sourceTree = "<group>"; };
+		DE30C80518BD353100C9B409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE30C80718BD353100C9B409 /* DHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHViewController.h; sourceTree = "<group>"; };
+		DE30C80818BD353100C9B409 /* DHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHViewController.m; sourceTree = "<group>"; };
+		DE30C80A18BD353100C9B409 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DE30C81018BD353100C9B409 /* SAX-JSON-Parser-ForStreamingDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SAX-JSON-Parser-ForStreamingDataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE30C81118BD353100C9B409 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DE30C81918BD353100C9B409 /* SAX-JSON-Parser-ForStreamingDataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SAX-JSON-Parser-ForStreamingDataTests-Info.plist"; sourceTree = "<group>"; };
+		DE30C81B18BD353100C9B409 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DE30C81D18BD353100C9B409 /* SAX_JSON_Parser_ForStreamingDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAX_JSON_Parser_ForStreamingDataTests.m; sourceTree = "<group>"; };
+		DE30C82818BD367D00C9B409 /* JSONObjectExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONObjectExtractor.h; sourceTree = "<group>"; };
+		DE30C82918BD367D00C9B409 /* JSONObjectExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONObjectExtractor.m; sourceTree = "<group>"; };
+		DE30C82C18BD38DA00C9B409 /* JSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JSON.txt; sourceTree = "<group>"; };
+		DE30C82F18BD399800C9B409 /* JSONObjectExtractorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONObjectExtractorProtocol.h; sourceTree = "<group>"; };
+		DE30C83018BD3D7D00C9B409 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DE30C83118BD3E7E00C9B409 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		DECCA1F118BE7B2E00763F46 /* SAX-JSON-Parser.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SAX-JSON-Parser.podspec"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE30C7EC18BD353100C9B409 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE30C7F518BD353100C9B409 /* CoreGraphics.framework in Frameworks */,
+				DE30C7F718BD353100C9B409 /* UIKit.framework in Frameworks */,
+				DE30C7F318BD353100C9B409 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE30C80D18BD353100C9B409 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE30C81218BD353100C9B409 /* XCTest.framework in Frameworks */,
+				DE30C81418BD353100C9B409 /* UIKit.framework in Frameworks */,
+				DE30C81318BD353100C9B409 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE30C7E618BD353100C9B409 = {
+			isa = PBXGroup;
+			children = (
+				DECCA1F118BE7B2E00763F46 /* SAX-JSON-Parser.podspec */,
+				DE30C83118BD3E7E00C9B409 /* README.md */,
+				DE30C83018BD3D7D00C9B409 /* LICENSE */,
+				DE30C7F818BD353100C9B409 /* SAX-JSON-Parser-ForStreamingData */,
+				DE30C81718BD353100C9B409 /* SAX-JSON-Parser-ForStreamingDataTests */,
+				DE30C7F118BD353100C9B409 /* Frameworks */,
+				DE30C7F018BD353100C9B409 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE30C7F018BD353100C9B409 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE30C7EF18BD353100C9B409 /* SAX-JSON-Parser-ForStreamingData.app */,
+				DE30C81018BD353100C9B409 /* SAX-JSON-Parser-ForStreamingDataTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE30C7F118BD353100C9B409 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE30C7F218BD353100C9B409 /* Foundation.framework */,
+				DE30C7F418BD353100C9B409 /* CoreGraphics.framework */,
+				DE30C7F618BD353100C9B409 /* UIKit.framework */,
+				DE30C81118BD353100C9B409 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE30C7F818BD353100C9B409 /* SAX-JSON-Parser-ForStreamingData */ = {
+			isa = PBXGroup;
+			children = (
+				DE30C80418BD353100C9B409 /* Main.storyboard */,
+				DE30C82718BD367D00C9B409 /* Extractor */,
+				DE30C80118BD353100C9B409 /* DHAppDelegate.h */,
+				DE30C80218BD353100C9B409 /* DHAppDelegate.m */,
+				DE30C80718BD353100C9B409 /* DHViewController.h */,
+				DE30C80818BD353100C9B409 /* DHViewController.m */,
+				DE30C80A18BD353100C9B409 /* Images.xcassets */,
+				DE30C82C18BD38DA00C9B409 /* JSON.txt */,
+				DE30C7F918BD353100C9B409 /* Supporting Files */,
+			);
+			path = "SAX-JSON-Parser-ForStreamingData";
+			sourceTree = "<group>";
+		};
+		DE30C7F918BD353100C9B409 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE30C7FA18BD353100C9B409 /* SAX-JSON-Parser-ForStreamingData-Info.plist */,
+				DE30C7FB18BD353100C9B409 /* InfoPlist.strings */,
+				DE30C7FE18BD353100C9B409 /* main.m */,
+				DE30C80018BD353100C9B409 /* SAX-JSON-Parser-ForStreamingData-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE30C81718BD353100C9B409 /* SAX-JSON-Parser-ForStreamingDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE30C81D18BD353100C9B409 /* SAX_JSON_Parser_ForStreamingDataTests.m */,
+				DE30C81818BD353100C9B409 /* Supporting Files */,
+			);
+			path = "SAX-JSON-Parser-ForStreamingDataTests";
+			sourceTree = "<group>";
+		};
+		DE30C81818BD353100C9B409 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE30C81918BD353100C9B409 /* SAX-JSON-Parser-ForStreamingDataTests-Info.plist */,
+				DE30C81A18BD353100C9B409 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE30C82718BD367D00C9B409 /* Extractor */ = {
+			isa = PBXGroup;
+			children = (
+				DE30C82F18BD399800C9B409 /* JSONObjectExtractorProtocol.h */,
+				DE30C82818BD367D00C9B409 /* JSONObjectExtractor.h */,
+				DE30C82918BD367D00C9B409 /* JSONObjectExtractor.m */,
+			);
+			path = Extractor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE30C7EE18BD353100C9B409 /* SAX-JSON-Parser-ForStreamingData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE30C82118BD353100C9B409 /* Build configuration list for PBXNativeTarget "SAX-JSON-Parser-ForStreamingData" */;
+			buildPhases = (
+				DE30C7EB18BD353100C9B409 /* Sources */,
+				DE30C7EC18BD353100C9B409 /* Frameworks */,
+				DE30C7ED18BD353100C9B409 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SAX-JSON-Parser-ForStreamingData";
+			productName = "SAX-JSON-Parser-ForStreamingData";
+			productReference = DE30C7EF18BD353100C9B409 /* SAX-JSON-Parser-ForStreamingData.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE30C80F18BD353100C9B409 /* SAX-JSON-Parser-ForStreamingDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE30C82418BD353100C9B409 /* Build configuration list for PBXNativeTarget "SAX-JSON-Parser-ForStreamingDataTests" */;
+			buildPhases = (
+				DE30C80C18BD353100C9B409 /* Sources */,
+				DE30C80D18BD353100C9B409 /* Frameworks */,
+				DE30C80E18BD353100C9B409 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE30C81618BD353100C9B409 /* PBXTargetDependency */,
+			);
+			name = "SAX-JSON-Parser-ForStreamingDataTests";
+			productName = "SAX-JSON-Parser-ForStreamingDataTests";
+			productReference = DE30C81018BD353100C9B409 /* SAX-JSON-Parser-ForStreamingDataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE30C7E718BD353100C9B409 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DH;
+				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					DE30C80F18BD353100C9B409 = {
+						TestTargetID = DE30C7EE18BD353100C9B409;
+					};
+				};
+			};
+			buildConfigurationList = DE30C7EA18BD353100C9B409 /* Build configuration list for PBXProject "SAX-JSON-Parser-ForStreamingData" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE30C7E618BD353100C9B409;
+			productRefGroup = DE30C7F018BD353100C9B409 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE30C7EE18BD353100C9B409 /* SAX-JSON-Parser-ForStreamingData */,
+				DE30C80F18BD353100C9B409 /* SAX-JSON-Parser-ForStreamingDataTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE30C7ED18BD353100C9B409 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE30C82D18BD38DA00C9B409 /* JSON.txt in Resources */,
+				DE30C80B18BD353100C9B409 /* Images.xcassets in Resources */,
+				DE30C7FD18BD353100C9B409 /* InfoPlist.strings in Resources */,
+				DE30C80618BD353100C9B409 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE30C80E18BD353100C9B409 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE30C82E18BD38DA00C9B409 /* JSON.txt in Resources */,
+				DE30C81C18BD353100C9B409 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE30C7EB18BD353100C9B409 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE30C80318BD353100C9B409 /* DHAppDelegate.m in Sources */,
+				DE30C82A18BD367D00C9B409 /* JSONObjectExtractor.m in Sources */,
+				DE30C80918BD353100C9B409 /* DHViewController.m in Sources */,
+				DE30C7FF18BD353100C9B409 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE30C80C18BD353100C9B409 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE30C81E18BD353100C9B409 /* SAX_JSON_Parser_ForStreamingDataTests.m in Sources */,
+				DE30C82B18BD367D00C9B409 /* JSONObjectExtractor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE30C81618BD353100C9B409 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE30C7EE18BD353100C9B409 /* SAX-JSON-Parser-ForStreamingData */;
+			targetProxy = DE30C81518BD353100C9B409 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE30C7FB18BD353100C9B409 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE30C7FC18BD353100C9B409 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DE30C80418BD353100C9B409 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE30C80518BD353100C9B409 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE30C81A18BD353100C9B409 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE30C81B18BD353100C9B409 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE30C81F18BD353100C9B409 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DE30C82018BD353100C9B409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE30C82218BD353100C9B409 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SAX-JSON-Parser-ForStreamingData/SAX-JSON-Parser-ForStreamingData-Prefix.pch";
+				INFOPLIST_FILE = "SAX-JSON-Parser-ForStreamingData/SAX-JSON-Parser-ForStreamingData-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DE30C82318BD353100C9B409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SAX-JSON-Parser-ForStreamingData/SAX-JSON-Parser-ForStreamingData-Prefix.pch";
+				INFOPLIST_FILE = "SAX-JSON-Parser-ForStreamingData/SAX-JSON-Parser-ForStreamingData-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DE30C82518BD353100C9B409 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SAX-JSON-Parser-ForStreamingData.app/SAX-JSON-Parser-ForStreamingData";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SAX-JSON-Parser-ForStreamingData/SAX-JSON-Parser-ForStreamingData-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SAX-JSON-Parser-ForStreamingDataTests/SAX-JSON-Parser-ForStreamingDataTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DE30C82618BD353100C9B409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SAX-JSON-Parser-ForStreamingData.app/SAX-JSON-Parser-ForStreamingData";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SAX-JSON-Parser-ForStreamingData/SAX-JSON-Parser-ForStreamingData-Prefix.pch";
+				INFOPLIST_FILE = "SAX-JSON-Parser-ForStreamingDataTests/SAX-JSON-Parser-ForStreamingDataTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE30C7EA18BD353100C9B409 /* Build configuration list for PBXProject "SAX-JSON-Parser-ForStreamingData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE30C81F18BD353100C9B409 /* Debug */,
+				DE30C82018BD353100C9B409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE30C82118BD353100C9B409 /* Build configuration list for PBXNativeTarget "SAX-JSON-Parser-ForStreamingData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE30C82218BD353100C9B409 /* Debug */,
+				DE30C82318BD353100C9B409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE30C82418BD353100C9B409 /* Build configuration list for PBXNativeTarget "SAX-JSON-Parser-ForStreamingDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE30C82518BD353100C9B409 /* Debug */,
+				DE30C82618BD353100C9B409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE30C7E718BD353100C9B409 /* Project object */;
+}
