@@ -21,11 +21,9 @@
 
 #ifdef MONGO_DB
 
-// MongoDB Related
-#define DATE_FORMAT @"EEE, MMM dd yyyy, hh:mm a zzz"
-#define CUSHION		9	// MongoDB specific: exact size needed so if we see a 'O', we can memcmp with "bjectId('"
-static NSDateFormatter *jsonToDate;
-static NSDateFormatter *dateToIso8601;
+// MongoDB specific: exact size needed so if we see a 'O', we can memcmp with "bjectId('"
+// similar issue with date, that's why the default is to turn it into a fixed length iso8601 date
+#define CUSHION		9
 
 #else
 
@@ -58,23 +56,6 @@ static NSDateFormatter *dateToIso8601;
 	BOOL				eatObjectIDEnding;
 	BOOL				isDone;
 }
-
-#ifdef MONGO_DB
-+ (void)initialize
-{
-	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-
-	jsonToDate = [NSDateFormatter new];
-	[jsonToDate setDateFormat:DATE_FORMAT];
-	[jsonToDate setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
-	[jsonToDate setCalendar:gregorian];
-
-	dateToIso8601 = [NSDateFormatter new];
-	[dateToIso8601 setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
-	[dateToIso8601 setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
-	[dateToIso8601 setCalendar:gregorian];
-}
-#endif
 
 + (BOOL)isArray:(NSData *)data
 {
@@ -254,15 +235,14 @@ static NSDateFormatter *dateToIso8601;
 					while(*--start != '"') ;
 					++start;
 					size_t len = ptr - start - 1;
-					NSString *dateStr = [[NSString alloc] initWithBytes:start length:len encoding:NSUTF8StringEncoding];
+					NSString *origDate = [[NSString alloc] initWithBytes:start length:len encoding:NSUTF8StringEncoding];
 //assert(![dateStr isEqualToString:@"Wed Apr 20 2011 21:02:04 GMT-0400 (EDT)"]);
 
 //NSLog(@"DateSTR: <%@>", dateStr);
-					NSDate *date = [jsonToDate dateFromString:dateStr];
-					NSString *isoDateStr = [dateToIso8601 stringFromDate:date];
-					const char *newDate = [isoDateStr cStringUsingEncoding:NSUTF8StringEncoding];
-					size_t dateLen = strlen(newDate);
-					memcpy(start, newDate, dateLen);
+					NSString *newDate = [_partialsDelegate dateForDate:origDate];
+					const char *newDateCstr = [newDate cStringUsingEncoding:NSUTF8StringEncoding];
+					size_t dateLen = strlen(newDateCstr);
+					memcpy(start, newDateCstr, dateLen);
 					
 					unsigned char *midPtr = start+dateLen;
 					*midPtr++ = '"';

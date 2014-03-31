@@ -24,6 +24,18 @@
 
 #define CHUNK_SIZE	256
 
+#ifdef MONGO_DB
+#define FILE_NAME @"JSON+Mongo"
+#else
+#define FILE_NAME @"JSON"
+#endif
+
+#ifdef MONGO_DB
+#define DATE_FORMAT @"EEE, MMM dd yyyy, hh:mm a zzz"
+static NSDateFormatter *jsonToDate;
+static NSDateFormatter *dateToIso8601;
+#endif
+
 @interface DHViewController () <JSONObjectExtractorProtocol>
 @property (strong, nonatomic) IBOutlet UIButton *runButton;
 @property (strong, nonatomic) IBOutlet UIProgressView *progressBar;
@@ -48,25 +60,44 @@
 	JSONObjectExtractor *json;
 }
 
+#ifdef MONGO_DB
++ (void)initialize
+{
+	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+
+	jsonToDate = [NSDateFormatter new];
+	[jsonToDate setDateFormat:DATE_FORMAT];
+	[jsonToDate setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
+	[jsonToDate setCalendar:gregorian];
+
+	dateToIso8601 = [NSDateFormatter new];
+	[dateToIso8601 setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+	[dateToIso8601 setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
+	[dateToIso8601 setCalendar:gregorian];
+}
+#endif
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-
-	NSString *path = [[NSBundle mainBundle] pathForResource:@"JSON" ofType:@"txt"];
+	NSString *path = [[NSBundle mainBundle] pathForResource:FILE_NAME ofType:@"txt"];
 	assert(path);
 	
 	data = [NSData dataWithContentsOfFile:path];
 	assert(data);
 	assert([JSONObjectExtractor isArray:data]);
 
+#ifndef MONGO_DB
 	__autoreleasing NSError *error;
 	preComputedObjects = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
 	assert([preComputedObjects isKindOfClass:[NSArray class]]);
 	NSUInteger count = [preComputedObjects count];
 	assert(count);
-	
+#else
+	NSUInteger count = 16;
+#endif
 	parsedObjects = [NSMutableArray arrayWithCapacity:count];
 
 	[self updateUI];
@@ -101,7 +132,7 @@
 	
 	NSUInteger newOffset = offset + readNow;
 	if(readNow) {
-NSLog(@"SEND %d", readNow);
+		// NSLog(@"SEND %zd", readNow);
 		json.currentReceiveSize = newOffset;
 		[json addData:[data subdataWithRange:NSMakeRange(offset, readNow)]];
 	}
@@ -166,10 +197,11 @@ NSLog(@"SEND %d", readNow);
 			progress = 1;
 			
 			[self updateUI];
-			
+
+#ifndef MONGO_DB
 			BOOL ret = [preComputedObjects isEqualToArray:parsedObjects];
 			assert(ret);
-			
+#endif
 			dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^
 				{
 					t = nil;
@@ -179,5 +211,14 @@ NSLog(@"SEND %d", readNow);
 				} );
 		} );
 }
+#ifdef MONGO_DB
+- (NSString *)dateForDate:(NSString *)origDate
+{
+	NSDate *date = [jsonToDate dateFromString:origDate];
+	NSString *isoDateStr = [dateToIso8601 stringFromDate:date];
+NSLog(@"IN: %@ OUT: %@", origDate, isoDateStr);
+	return isoDateStr;
+}
+#endif
 
 @end

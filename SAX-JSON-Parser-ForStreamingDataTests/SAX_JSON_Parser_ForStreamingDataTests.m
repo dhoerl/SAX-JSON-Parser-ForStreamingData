@@ -14,6 +14,11 @@
 #define LOOPS		1000000
 #define CHUNK_SIZE	256
 
+#ifdef MONGO_DB
+#define FILE_NAME @"JSON+Mongo"
+#else
+#define FILE_NAME @"JSON"
+#endif
 
 @interface SAX_JSON_Parser_ForStreamingDataTests : XCTestCase <JSONObjectExtractorProtocol>
 
@@ -40,7 +45,7 @@
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 
-	NSString *path = [[NSBundle mainBundle] pathForResource:@"JSON" ofType:@"txt"];
+	NSString *path = [[NSBundle mainBundle] pathForResource:FILE_NAME ofType:@"txt"];
 	assert(path);
 	
 	data = [NSData dataWithContentsOfFile:path];

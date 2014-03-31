@@ -25,6 +25,19 @@
 		DE30C82B18BD367D00C9B409 /* JSONObjectExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DE30C82918BD367D00C9B409 /* JSONObjectExtractor.m */; };
 		DE30C82D18BD38DA00C9B409 /* JSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE30C82C18BD38DA00C9B409 /* JSON.txt */; };
 		DE30C82E18BD38DA00C9B409 /* JSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE30C82C18BD38DA00C9B409 /* JSON.txt */; };
+		DEA584BD18E9F48800451905 /* JSON+Mongo.txt in Resources */ = {isa = PBXBuildFile; fileRef = DEA584BC18E9F48800451905 /* JSON+Mongo.txt */; };
+		DEA584C018E9F57600451905 /* DHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE30C80218BD353100C9B409 /* DHAppDelegate.m */; };
+		DEA584C118E9F57600451905 /* JSONObjectExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DE30C82918BD367D00C9B409 /* JSONObjectExtractor.m */; };
+		DEA584C218E9F57600451905 /* DHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE30C80818BD353100C9B409 /* DHViewController.m */; };
+		DEA584C318E9F57600451905 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE30C7FE18BD353100C9B409 /* main.m */; };
+		DEA584C518E9F57600451905 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE30C7F418BD353100C9B409 /* CoreGraphics.framework */; };
+		DEA584C618E9F57600451905 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE30C7F618BD353100C9B409 /* UIKit.framework */; };
+		DEA584C718E9F57600451905 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE30C7F218BD353100C9B409 /* Foundation.framework */; };
+		DEA584C918E9F57600451905 /* JSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE30C82C18BD38DA00C9B409 /* JSON.txt */; };
+		DEA584CA18E9F57600451905 /* JSON+Mongo.txt in Resources */ = {isa = PBXBuildFile; fileRef = DEA584BC18E9F48800451905 /* JSON+Mongo.txt */; };
+		DEA584CB18E9F57600451905 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE30C80A18BD353100C9B409 /* Images.xcassets */; };
+		DEA584CC18E9F57600451905 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE30C7FB18BD353100C9B409 /* InfoPlist.strings */; };
+		DEA584CD18E9F57600451905 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE30C80418BD353100C9B409 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +76,9 @@
 		DE30C82F18BD399800C9B409 /* JSONObjectExtractorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONObjectExtractorProtocol.h; sourceTree = "<group>"; };
 		DE30C83018BD3D7D00C9B409 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DE30C83118BD3E7E00C9B409 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		DEA584BC18E9F48800451905 /* JSON+Mongo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "JSON+Mongo.txt"; sourceTree = "<group>"; };
+		DEA584D118E9F57600451905 /* SAX-JSON-Parser-ForStreamingData copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SAX-JSON-Parser-ForStreamingData copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEA584D218E9F57600451905 /* SAX-JSON-Parser-ForStreamingData copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SAX-JSON-Parser-ForStreamingData copy-Info.plist"; path = "/Volumes/Data/git/SAX-JSON-Parser-ForStreamingData/SAX-JSON-Parser-ForStreamingData copy-Info.plist"; sourceTree = "<absolute>"; };
 		DECCA1F118BE7B2E00763F46 /* SAX-JSON-Parser.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SAX-JSON-Parser.podspec"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +103,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEA584C418E9F57600451905 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEA584C518E9F57600451905 /* CoreGraphics.framework in Frameworks */,
+				DEA584C618E9F57600451905 /* UIKit.framework in Frameworks */,
+				DEA584C718E9F57600451905 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,6 +126,7 @@
 				DE30C81718BD353100C9B409 /* SAX-JSON-Parser-ForStreamingDataTests */,
 				DE30C7F118BD353100C9B409 /* Frameworks */,
 				DE30C7F018BD353100C9B409 /* Products */,
+				DEA584D218E9F57600451905 /* SAX-JSON-Parser-ForStreamingData copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +135,7 @@
 			children = (
 				DE30C7EF18BD353100C9B409 /* SAX-JSON-Parser-ForStreamingData.app */,
 				DE30C81018BD353100C9B409 /* SAX-JSON-Parser-ForStreamingDataTests.xctest */,
+				DEA584D118E9F57600451905 /* SAX-JSON-Parser-ForStreamingData copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +162,7 @@
 				DE30C80818BD353100C9B409 /* DHViewController.m */,
 				DE30C80A18BD353100C9B409 /* Images.xcassets */,
 				DE30C82C18BD38DA00C9B409 /* JSON.txt */,
+				DEA584BC18E9F48800451905 /* JSON+Mongo.txt */,
 				DE30C7F918BD353100C9B409 /* Supporting Files */,
 			);
 			path = "SAX-JSON-Parser-ForStreamingData";
@@ -216,6 +245,23 @@
 			productReference = DE30C81018BD353100C9B409 /* SAX-JSON-Parser-ForStreamingDataTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		DEA584BE18E9F57600451905 /* SAX-JSON-Parser-ForStreamingData+Mongo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEA584CE18E9F57600451905 /* Build configuration list for PBXNativeTarget "SAX-JSON-Parser-ForStreamingData+Mongo" */;
+			buildPhases = (
+				DEA584BF18E9F57600451905 /* Sources */,
+				DEA584C418E9F57600451905 /* Frameworks */,
+				DEA584C818E9F57600451905 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SAX-JSON-Parser-ForStreamingData+Mongo";
+			productName = "SAX-JSON-Parser-ForStreamingData";
+			productReference = DEA584D118E9F57600451905 /* SAX-JSON-Parser-ForStreamingData copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -244,6 +290,7 @@
 			projectRoot = "";
 			targets = (
 				DE30C7EE18BD353100C9B409 /* SAX-JSON-Parser-ForStreamingData */,
+				DEA584BE18E9F57600451905 /* SAX-JSON-Parser-ForStreamingData+Mongo */,
 				DE30C80F18BD353100C9B409 /* SAX-JSON-Parser-ForStreamingDataTests */,
 			);
 		};
@@ -255,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE30C82D18BD38DA00C9B409 /* JSON.txt in Resources */,
+				DEA584BD18E9F48800451905 /* JSON+Mongo.txt in Resources */,
 				DE30C80B18BD353100C9B409 /* Images.xcassets in Resources */,
 				DE30C7FD18BD353100C9B409 /* InfoPlist.strings in Resources */,
 				DE30C80618BD353100C9B409 /* Main.storyboard in Resources */,
@@ -267,6 +315,18 @@
 			files = (
 				DE30C82E18BD38DA00C9B409 /* JSON.txt in Resources */,
 				DE30C81C18BD353100C9B409 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA584C818E9F57600451905 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEA584C918E9F57600451905 /* JSON.txt in Resources */,
+				DEA584CA18E9F57600451905 /* JSON+Mongo.txt in Resources */,
+				DEA584CB18E9F57600451905 /* Images.xcassets in Resources */,
+				DEA584CC18E9F57600451905 /* InfoPlist.strings in Resources */,
+				DEA584CD18E9F57600451905 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +350,17 @@
 			files = (
 				DE30C81E18BD353100C9B409 /* SAX_JSON_Parser_ForStreamingDataTests.m in Sources */,
 				DE30C82B18BD367D00C9B409 /* JSONObjectExtractor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA584BF18E9F57600451905 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEA584C018E9F57600451905 /* DHAppDelegate.m in Sources */,
+				DEA584C118E9F57600451905 /* JSONObjectExtractor.m in Sources */,
+				DEA584C218E9F57600451905 /* DHViewController.m in Sources */,
+				DEA584C318E9F57600451905 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +538,41 @@
 			};
 			name = Release;
 		};
+		DEA584CF18E9F57600451905 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SAX-JSON-Parser-ForStreamingData/SAX-JSON-Parser-ForStreamingData-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+					MONGO_DB,
+				);
+				INFOPLIST_FILE = "SAX-JSON-Parser-ForStreamingData copy-Info.plist";
+				PRODUCT_NAME = "SAX-JSON-Parser-ForStreamingData copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DEA584D018E9F57600451905 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SAX-JSON-Parser-ForStreamingData/SAX-JSON-Parser-ForStreamingData-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					MONGO_DB,
+				);
+				INFOPLIST_FILE = "SAX-JSON-Parser-ForStreamingData copy-Info.plist";
+				PRODUCT_NAME = "SAX-JSON-Parser-ForStreamingData copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -493,6 +599,15 @@
 			buildConfigurations = (
 				DE30C82518BD353100C9B409 /* Debug */,
 				DE30C82618BD353100C9B409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEA584CE18E9F57600451905 /* Build configuration list for PBXNativeTarget "SAX-JSON-Parser-ForStreamingData+Mongo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEA584CF18E9F57600451905 /* Debug */,
+				DEA584D018E9F57600451905 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -2,6 +2,11 @@ SAX-JSON-Parser-ForStreamingData
 ================================
 
 ### CHANGE LOG:
+ - 1.1.0 3/28/2014
+ * Provide a second MONGO_DB Scheme
+ * new protocol method so the delegate can translate 'new Date' strings into some common format
+ * CocoaPods support (Podspec now in CocoaPods)
+
  - 1.0.0 2/26/2014  First Release
 
 ### DESCRIPTION

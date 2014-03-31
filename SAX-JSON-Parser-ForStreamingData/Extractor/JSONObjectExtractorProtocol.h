@@ -28,11 +28,42 @@
 #define kTotReceiveSize		@"totalReceiveSize"
 #define kPercentComplete	@"percentComplete"
 
+/**
+ Allows the Parser to advise you of various events.
+*/
 @protocol JSONObjectExtractorProtocol <NSObject>
 
+/**
+ As the parser is fed data, after each chunk is processed all parsed objects
+ are passed to the delegate.
+ @param identifier - your object that uniquely identifies this particular stream
+ @param results - an array with one or more objects in it, usually NSDictionaries
+ @param progress - a dictionary with three keys in it, as defined above
+ There are only a small number of cases that can result in failure. The best strategy
+ for these are to log them to your web site and notify Sailthru with the exact message.
+ @note There will always be at least one more object after these are sent.
+ */
 - (void)query:(id)identifier partialResults:(NSArray *)results perCentDone:(NSDictionary *)progress;
 
+#ifdef MONGO_DB
+/**
+ The delegate must provide a translation for the string originally contained in a "new Date('...')" field.
+ @param origDate - the date string enclosed by the single quoted new Date field
+ @param returns - you can reformat as desired, or just return the original date.
+ @note A sample translation is provided in the DHViewController code.
+ */
+- (NSString *)dateForDate:(NSString *)origDate;
+#endif
+
 @optional
+/**
+ When the final data fragment is processed, the delegate can either read the last object(s) or
+ define this method, in which case it will be used to transfer the last object(s).
+ @param identifier - your object that uniquely identifies this particular stream
+ @param results - an array with one or more objects in it, usually NSDictionaries
+ @param error - if the final chunk is poorly formed an error is sent, otherwise its nil.
+ @note Using this method will drain the array of objects, so the delegate will never see any objects in the results property.
+ */
 - (void)query:(id)identifier lastResults:(NSArray *)results error:(NSError *)error;
 
 
