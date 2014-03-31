@@ -13,11 +13,11 @@ Pod::Spec.new do |s|
 
   s.default_subspec       = 'Core'
   s.subspec 'Core' do |sp|
-	sp.source_files       = 'Extractor/*.{h,m}'
+	sp.source_files       = 'SAX-JSON-Parser-ForStreamingData/Extractor/*.{h,m}'
     sp.frameworks         = 'Foundation'
   end
   s.subspec 'Mongo' do |sp|
-	sp.source_files       = 'Extractor/*.{h,m}'
+	sp.source_files       = 'SAX-JSON-Parser-ForStreamingData/Extractor/*.{h,m}'
     sp.frameworks         = 'Foundation'
     sp.compiler_flags     = '-DMONGO_DB'
   end
